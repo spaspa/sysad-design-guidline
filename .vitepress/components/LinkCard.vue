@@ -1,8 +1,8 @@
 <template>
-  <div :class="$style.container">
+  <a :href="href" :class="$style.container">
     <div :class="$style.title">{{ title }}</div>
     <div :class="$style.description">{{ description }}</div>
-  </div>
+  </a>
 </template>
 
 <script lang="ts">
@@ -11,7 +11,8 @@ import { defineComponent, ref } from "vue";
 export default defineComponent({
   props: {
     title: String,
-    description: String
+    description: String,
+    href: String
   }
 })
 </script>
@@ -24,6 +25,11 @@ export default defineComponent({
   overflow: hidden;
   background-color: #fff;
   min-height: 5rem;
+  color: inherit!important;
+  cursor: pointer;
+  &:link, &:hover, &:visited, &:active {
+    text-decoration: none!important;
+  }
 }
 .title {
   font-weight: bold;

@@ -5,11 +5,19 @@
 <link-card
   title="Brand"
   description="traQのアイデンディティや目指すものについて"
+  href="/docs/traQ/brand"
   />
 
 <link-card
-  title="Foundations"
-  description="基本的なビジュアルデザインの指針"
+  title="Color"
+  description="デフォルトテーマの色彩設計"
+  href="/docs/traQ/color"
+  />
+
+<link-card
+  title="Layout"
+  description="レイアウト・スペーシング"
+  href="/docs/traQ/layout"
   />
 
 <link-card
