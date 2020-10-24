@@ -17,24 +17,29 @@
   </div>
 </template>
 
-<script setup="props" lang="ts">
-import { computed, ref } from "vue";
+<script  lang="ts">
+import { computed, defineComponent, ref } from "vue";
 
-declare const props: {
-  hex: string;
-  title: string;
-};
+export default defineComponent({
+  props: {
+    hex: String,
+    title: String
+  },
+  setup(props) {
+    const colorAreaStyle = computed(() => ({
+      background: `#${props.hex}`,
+    }));
 
-export const colorAreaStyle = computed(() => ({
-  background: `#${props.hex}`,
-}));
+    const rgb = computed(() => {
+      const r = parseInt(props.hex.substring(0, 2), 16);
+      const g = parseInt(props.hex.substring(2, 4), 16);
+      const b = parseInt(props.hex.substring(4, 6), 16);
+      return [r, g, b].join(",");
+    });
+    return { colorAreaStyle, rgb }
+  }
+})
 
-export const rgb = computed(() => {
-  const r = parseInt(props.hex.substring(0, 2), 16);
-  const g = parseInt(props.hex.substring(2, 4), 16);
-  const b = parseInt(props.hex.substring(4, 6), 16);
-  return [r, g, b].join(",");
-});
 </script>
 
 <style module lang="scss">

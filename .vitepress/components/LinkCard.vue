@@ -5,13 +5,15 @@
   </div>
 </template>
 
-<script setup="props" lang="ts">
-import { ref } from "vue";
+<script lang="ts">
+import { defineComponent, ref } from "vue";
 
-declare const props: {
-  title: string;
-  description: string;
-};
+export default defineComponent({
+  props: {
+    title: String,
+    description: String
+  }
+})
 </script>
 
 <style module lang="scss">
@@ -27,7 +29,5 @@ declare const props: {
   font-weight: bold;
   font-size: 1.25rem;
   margin-bottom: 0.25rem;
-}
-.description {
 }
 </style>
