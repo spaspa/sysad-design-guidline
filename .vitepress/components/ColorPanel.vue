@@ -34,7 +34,7 @@ export default defineComponent({
       const r = parseInt(props.hex.substring(0, 2), 16);
       const g = parseInt(props.hex.substring(2, 4), 16);
       const b = parseInt(props.hex.substring(4, 6), 16);
-      return [r, g, b].join(",");
+      return [r, g, b].join(", ");
     });
     return { colorAreaStyle, rgb }
   }
@@ -47,33 +47,36 @@ export default defineComponent({
   border-radius: 4px;
   overflow: hidden;
   background-color: #f4f5f7;
-  height: 20rem;
-  max-width: 24rem;
+  max-height: 16rem;
+  max-width: 16rem;
   color: #3a3b3b;
 }
 .colorArea {
   width: 100%;
-  height: 12rem;
+  height: 8rem;
 }
 .text {
   padding: 1.5rem;
 }
 .title {
-  font-size: 1.5rem;
+  font-size: 1rem ;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 .noteContainer {
   display: flex;
   justify-content: space-between;
-  max-width: 75%;
 }
 .noteTitle {
   margin-bottom: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: bold;
+  color: #49535B;
 }
 .note {
   font-size: 1rem;
+  font-family: 'Menlo', 'Source Code Pro', monospace;
+  color: #49535B;
+  font-size: 0.875rem;
 }
 </style>

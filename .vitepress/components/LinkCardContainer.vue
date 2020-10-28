@@ -23,6 +23,9 @@ export default defineComponent({
   > * {
     margin: 1rem;
     flex-basis: calc(50% - 2rem);
+    @media (max-width: 600px) {
+    flex-basis: 100%;
+    }
   }
 }
 </style>
