@@ -10,9 +10,15 @@
     />
 </link-card-container>
 
-## Foundations
+## Visual Design
 
 <link-card-container>
+  <link-card
+    title="Visual Design Principals"
+    description="デザイン上意識すべきこと"
+    href="/docs/traQ/visual-design"
+    />
+
   <link-card
     title="Color"
     description="デフォルトテーマの色彩設計"
@@ -23,14 +29,5 @@
     title="Layout"
     description="レイアウト・スペーシング"
     href="/docs/traQ/layout"
-    />
-</link-card-container>
-
-## Patterns
-
-<link-card-container>
-  <link-card
-    title="Patterns"
-    description="デザインパターンライブラリ"
     />
 </link-card-container>
