@@ -1,5 +1,5 @@
 {
-  "name": "vitepress",
+  "name": "sysad-design-guideline",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,8 +14,9 @@
     "vue": "^3.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vitepress build"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "author": "",
   "license": "ISC"
